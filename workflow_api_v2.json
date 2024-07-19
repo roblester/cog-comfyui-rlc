@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 227215390924741,
+      "seed": 23384128233160,
       "steps": 30,
       "cfg": 7,
       "sampler_name": "euler_ancestral",
@@ -134,7 +134,7 @@
         1
       ],
       "image": [
-        "13",
+        "44",
         0
       ]
     },
@@ -196,7 +196,7 @@
   "24": {
     "inputs": {
       "pixels": [
-        "34",
+        "13",
         0
       ],
       "vae": [
@@ -264,24 +264,6 @@
       "title": "Canny Edge"
     }
   },
-  "34": {
-    "inputs": {
-      "width": 1280,
-      "height": 720,
-      "interpolation": "nearest",
-      "keep_proportion": false,
-      "condition": "always",
-      "multiple_of": 0,
-      "image": [
-        "13",
-        0
-      ]
-    },
-    "class_type": "ImageResize+",
-    "_meta": {
-      "title": "🔧 Image Resize"
-    }
-  },
   "36": {
     "inputs": {
       "lora_name": "araminta_k/haute-couture-illustration.safetensors",
@@ -311,6 +293,43 @@
     "class_type": "PreviewImage",
     "_meta": {
       "title": "Preview Image"
+    }
+  },
+  "43": {
+    "inputs": {
+      "image": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "CM_NearestSDXLResolution",
+    "_meta": {
+      "title": "NearestSDXLResolution"
+    }
+  },
+  "44": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "upscale_method": "nearest-exact",
+      "keep_proportion": false,
+      "divisible_by": 2,
+      "width_input": [
+        "43",
+        0
+      ],
+      "height_input": [
+        "43",
+        1
+      ],
+      "image": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJ",
+    "_meta": {
+      "title": "Resize Image"
     }
   }
 }
