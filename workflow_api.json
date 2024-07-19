@@ -1,8 +1,8 @@
 {
   "3": {
     "inputs": {
-      "seed": 227215390924741,
-      "steps": 30,
+      "seed": 269407956776598,
+      "steps": 40,
       "cfg": 7,
       "sampler_name": "euler_ancestral",
       "scheduler": "karras",
@@ -31,7 +31,7 @@
   },
   "4": {
     "inputs": {
-      "ckpt_name": "albedobaseXL_v21.safetensors"
+      "ckpt_name": "RealVisXL_V4.0.safetensors"
     },
     "class_type": "CheckpointLoaderSimple",
     "_meta": {
@@ -108,7 +108,7 @@
   },
   "13": {
     "inputs": {
-      "image": "https://github.com/roblester/zine-style-data/raw/main/inputs/0_1_640_N%20(1).webp",
+      "image": "https://github.com/roblester/zine-style-data/blob/main/inputs/0_1_640_N.jpg?raw=true",
       "upload": "image"
     },
     "class_type": "LoadImage",
@@ -158,7 +158,7 @@
   },
   "21": {
     "inputs": {
-      "image": "https://github.com/roblester/zine-style-data/blob/main/inputs/0_2%20(2).jpg",
+      "image": "https://github.com/roblester/zine-style-data/blob/main/inputs/02_style.jpg?raw=true",
       "upload": "image"
     },
     "class_type": "LoadImage",
@@ -196,7 +196,7 @@
   "24": {
     "inputs": {
       "pixels": [
-        "34",
+        "13",
         0
       ],
       "vae": [
@@ -227,7 +227,7 @@
         0
       ],
       "image": [
-        "32",
+        "47",
         0
       ],
       "model_optional": [
@@ -249,43 +249,10 @@
       "title": "Load Advanced ControlNet Model 🛂🅐🅒🅝"
     }
   },
-  "32": {
-    "inputs": {
-      "low_threshold": 100,
-      "high_threshold": 200,
-      "resolution": 512,
-      "image": [
-        "13",
-        0
-      ]
-    },
-    "class_type": "CannyEdgePreprocessor",
-    "_meta": {
-      "title": "Canny Edge"
-    }
-  },
-  "34": {
-    "inputs": {
-      "width": 1280,
-      "height": 720,
-      "interpolation": "nearest",
-      "keep_proportion": false,
-      "condition": "always",
-      "multiple_of": 0,
-      "image": [
-        "13",
-        0
-      ]
-    },
-    "class_type": "ImageResize+",
-    "_meta": {
-      "title": "🔧 Image Resize"
-    }
-  },
   "36": {
     "inputs": {
       "lora_name": "araminta_k/haute-couture-illustration.safetensors",
-      "strength_model": 0.8,
+      "strength_model": 0.1,
       "strength_clip": 1,
       "model": [
         "4",
@@ -301,16 +268,18 @@
       "title": "Load LoRA"
     }
   },
-  "40": {
+  "47": {
     "inputs": {
-      "images": [
-        "32",
+      "low_threshold": 0.4,
+      "high_threshold": 0.8,
+      "image": [
+        "13",
         0
       ]
     },
-    "class_type": "PreviewImage",
+    "class_type": "Canny",
     "_meta": {
-      "title": "Preview Image"
+      "title": "Canny"
     }
   }
 }
